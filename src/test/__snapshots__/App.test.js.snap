@@ -3,5 +3,3 @@
 exports[`Renders Component Renders Parent that holds store 1`] = `ShallowWrapper {}`;
 
 exports[`renders child component <Allpost/> 1`] = `ShallowWrapper {}`;
-
-exports[`renders child component renders child component 1`] = `ShallowWrapper {}`;
