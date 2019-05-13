@@ -1,6 +1,7 @@
 # CRUD APP
 
 [![Build Status](https://travis-ci.com/Thomas161/NewCRUD.svg?branch=master)](https://travis-ci.com/Thomas161/NewCRUD)
+[![npm version](https://badge.fury.io/js/npm.svg)](https://badge.fury.io/js/npm)
 
 ## Scripts
 
