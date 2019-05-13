@@ -5,9 +5,6 @@ import EditComponent from "./EditComponent";
 import "../css/AllPost.css";
 import PropTypes from "prop-types";
 class AllPost extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
       <div id="h1">
