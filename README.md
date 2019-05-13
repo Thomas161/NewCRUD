@@ -52,7 +52,7 @@ npm install uuid
 npm install --save prop-types
 ```
 
-## redux store // Provider // Enzyme // Adapter // configureMockStore
+## Redux store // Provider // Enzyme // Adapter // configureMockStore
 
 ### used for testing components, including mocking the redux store
 
@@ -60,32 +60,17 @@ npm install --save prop-types
 npm i redux react-redux enzyme enzyme-adapter-react-16 redux-mock-store
 ```
 
-## Learn More
+### TravisCi
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```python
+language: node_js
+node_js:
+  - "stable"
+cache:
+  directories:
+    - node_modules
+script:
+  - npm test
+  - npm run build
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
