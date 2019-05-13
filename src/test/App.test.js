@@ -4,7 +4,6 @@ import configureMockStore from "redux-mock-store";
 import { Provider } from "react-redux";
 import Enzyme, { shallow, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import sinon from "sinon";
 import AllPost from "../components/AllPost";
 import Post from "../components/Post";
 import PostForm from "../components/PostForm";

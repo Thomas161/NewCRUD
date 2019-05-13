@@ -17,6 +17,10 @@ class EditComponent extends Component {
     console.log("Mounts");
   }
 
+  componentWillUnmount() {
+    console.log("Unmounts");
+  }
+
   render() {
     return (
       <div>

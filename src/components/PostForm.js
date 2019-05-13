@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import "../css/PostForm.css";
 import uuid from "uuid";
-import Obfuscate from "react-obfuscate";
 class PostForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
