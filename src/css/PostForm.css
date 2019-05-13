@@ -1,0 +1,20 @@
+h1 {
+  color: black;
+  text-shadow: 1px 1px;
+  padding: 3%;
+}
+input {
+  padding: 10px 10px 10px 10px;
+  width: 40%;
+  border-radius: 15px;
+}
+#divElement {
+  position: relative;
+  align-content: center;
+  top: 40%;
+  left: 40%;
+  margin-top: -30px;
+  margin-left: -30px;
+  width: 80%;
+  height: 80%;
+}
