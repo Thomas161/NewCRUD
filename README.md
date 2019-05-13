@@ -1,6 +1,6 @@
 # CRUD APP
 
-https://travis-ci.com/Thomas161/NewCRUD/jobs/199567158#
+[![Build Status](https://travis-ci.com/Thomas161/NewCRUD.svg?branch=master)](https://travis-ci.com/Thomas161/NewCRUD)
 
 ## Scripts
 
