@@ -6,10 +6,11 @@ import "../css/AllPost.css";
 import PropTypes from "prop-types";
 class AllPost extends Component {
   render() {
+    const { head, posts } = this.props;
     return (
       <div id="h1">
-        <h1>{this.props.head}</h1>
-        {this.props.posts.map(post => (
+        <h1>{head}</h1>
+        {posts.map(post => (
           <div key={post.id}>
             {post.editing ? (
               <EditComponent post={post} key={post.id} />

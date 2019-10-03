@@ -3,30 +3,40 @@ import { connect } from "react-redux";
 
 class Post extends Component {
   render() {
+    const { title, message } = this.props.post;
     return (
       <div>
-        <h3>{this.props.post.title}</h3>
-        <h4>{this.props.post.message}</h4>
+        <div className="ui card">
+          <div className="content">
+            <h3>{title}</h3>
+            <h4>{message}</h4>
 
-        <button
-          className="btn btn-danger"
-          onClick={() =>
-            this.props.dispatch({
-              type: "EDIT_POST",
-              id: this.props.post.id
-            })
-          }
-        >
-          Edit
-        </button>
-        <button
-          className="btn btn-primary"
-          onClick={() =>
-            this.props.dispatch({ type: "DELETE_POST", id: this.props.post.id })
-          }
-        >
-          Delete
-        </button>
+            <button
+              onClick={() =>
+                this.props.dispatch({
+                  type: "EDIT_POST",
+                  id: this.props.post.id
+                })
+              }
+              className="circular ui icon button green"
+            >
+              <i className="icon edit"></i>
+              Edit
+            </button>
+            <button
+              onClick={() =>
+                this.props.dispatch({
+                  type: "DELETE_POST",
+                  id: this.props.post.id
+                })
+              }
+              className="circular ui icon button red"
+            >
+              <i className="icon trash"></i>
+              Delete
+            </button>
+          </div>
+        </div>
       </div>
     );
   }

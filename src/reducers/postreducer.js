@@ -1,4 +1,4 @@
-const postReducer = (state = [], action) => {
+export const postReducer = (state = [], action) => {
   switch (action.type) {
     case "ADD_POST":
       return state.concat([action.data]);
@@ -23,5 +23,3 @@ const postReducer = (state = [], action) => {
       return state;
   }
 };
-
-export default postReducer;

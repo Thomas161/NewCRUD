@@ -22,6 +22,7 @@ class EditComponent extends Component {
   }
 
   render() {
+    const { title, message } = this.props.post;
     return (
       <div>
         <form onSubmit={this.handleEdit}>
@@ -29,7 +30,7 @@ class EditComponent extends Component {
             required
             type="text"
             ref={input => (this.getTitle = input)}
-            defaultValue={this.props.post.title}
+            defaultValue={title}
             placeholder="Title"
           />
           <br />
@@ -38,7 +39,7 @@ class EditComponent extends Component {
             required
             rows="5"
             ref={input => (this.getMessage = input)}
-            defaultValue={this.props.post.message}
+            defaultValue={message}
             cols="28"
             placeholder="Enter Post"
           />

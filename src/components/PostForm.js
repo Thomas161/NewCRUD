@@ -39,7 +39,6 @@ class PostForm extends Component {
             placeholder="Title"
           />
           <br />
-          <br />
 
           <input
             type="text"
@@ -48,7 +47,8 @@ class PostForm extends Component {
           />
           <br />
           <br />
-          <button className="btn btn-info">Post</button>
+
+          <button className="ui inverted violet button">Post</button>
         </form>
       </div>
     );
