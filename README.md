@@ -49,28 +49,11 @@ npm install uuid
 ### Proptypes
 
 ```python
-npm install --save prop-types
+npm install prop-types
 ```
 
-## Redux store // Provider // Enzyme // Adapter // configureMockStore
-
-### used for testing components, including mocking the redux store
+### used for testing components
 
 ```python
-npm i redux react-redux enzyme enzyme-adapter-react-16 redux-mock-store
-```
-
-### TravisCi
-
-```python
-language: node_js
-node_js:
-  - "stable"
-cache:
-  directories:
-    - node_modules
-script:
-  - npm test
-  - npm run build
-
+npm i enzyme-adapter-react-16
 ```
