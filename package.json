@@ -14,14 +14,6 @@
     "redux": "^4.0.1",
     "uuid": "^3.3.2"
   },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js}"
-    ],
-    "testMatch": [
-      "**/tests/**/*.test.(js)"
-    ]
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
