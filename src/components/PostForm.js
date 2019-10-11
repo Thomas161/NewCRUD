@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import "../css/PostForm.css";
 import uuid from "uuid";
 class PostForm extends Component {
   handleSubmit = e => {
@@ -29,7 +28,7 @@ class PostForm extends Component {
 
   render() {
     return (
-      <div id="divElement">
+      <div className="divElement">
         <h1>Create Post</h1>
         <form className="pure-form" onSubmit={this.handleSubmit}>
           <input
@@ -39,15 +38,12 @@ class PostForm extends Component {
             placeholder="Title"
           />
           <br />
-
           <input
             type="text"
             ref={input => (this.getMessage = input)}
             placeholder="Message"
           />
           <br />
-          <br />
-
           <button className="ui inverted violet button">Post</button>
         </form>
       </div>

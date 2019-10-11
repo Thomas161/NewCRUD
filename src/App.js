@@ -2,18 +2,17 @@ import React, { Component } from "react";
 import PostForm from "../src/components/PostForm";
 import AllPost from "../src/components/AllPost";
 
-const styles = {
-  backgroundColor: "#ccff00",
-  // margin: "auto",
-  // width: "auto",
-  // height: "400px"
-  backgroundRepeat: "noRepeat"
-};
+// const styles = {
+//   backgroundColor: "#ccff00",
+//   // margin: "auto",
+//   // width: "auto",
+//   // height: "400px"
+//   backgroundRepeat: "noRepeat"
+// };
 class App extends Component {
   render() {
     return (
-      <div className="App" style={styles}>
-        <br />
+      <div className="App">
         <PostForm />
         <br />
         <AllPost />

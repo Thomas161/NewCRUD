@@ -45,7 +45,7 @@ class EditComponent extends Component {
           />
           <br />
           <br />
-          <button className="btn btn-warning">Update</button>
+          <button className="ui inverted violet button">Update</button>
         </form>
       </div>
     );
