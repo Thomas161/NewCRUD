@@ -3,16 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bootstrap": "^4.3.1",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.15.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-obfuscate": "^3.6.2",
     "react-redux": "^7.0.3",
     "react-scripts": "3.0.1",
-    "reactstrap": "^8.0.0",
+    "react-test-renderer": "^16.10.2",
     "redux": "^4.0.1",
     "uuid": "^3.3.2"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js}"
+    ],
+    "testMatch": [
+      "**/tests/**/*.test.(js)"
+    ]
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,13 +42,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.13.0",
-    "react-perf-tool": "^0.2.3",
-    "react-testing-library": "^7.0.0",
-    "redux-mock-store": "^1.5.3",
-    "sinon": "^7.3.2"
   }
 }

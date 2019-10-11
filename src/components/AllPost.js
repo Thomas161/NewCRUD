@@ -2,14 +2,12 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import Post from "./Post";
 import EditComponent from "./EditComponent";
-import "../css/AllPost.css";
-import PropTypes from "prop-types";
+
 class AllPost extends Component {
   render() {
-    const { head, posts } = this.props;
+    const { posts } = this.props;
     return (
-      <div id="h1">
-        <h1>{head}</h1>
+      <div>
         {posts.map(post => (
           <div key={post.id}>
             {post.editing ? (
@@ -28,13 +26,6 @@ const mapStateToProps = state => {
   return {
     posts: state
   };
-};
-
-AllPost.propTypes = {
-  head: PropTypes.string.isRequired
-};
-AllPost.defaultProps = {
-  head: "All Posts"
 };
 
 export default connect(mapStateToProps)(AllPost);

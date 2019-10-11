@@ -1,63 +1,24 @@
 import React from "react";
 import App from "../App";
-import configureMockStore from "redux-mock-store";
 import { Provider } from "react-redux";
-import Enzyme, { shallow, mount } from "enzyme";
+import ReactDOM from "react-dom";
+import { configure, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
-import AllPost from "../components/AllPost";
-import Post from "../components/Post";
-import PostForm from "../components/PostForm";
-Enzyme.configure({ adapter: new Adapter() });
+import * as actions from "../actions";
 
-const mockStore = configureMockStore();
-const store = mockStore({});
-
-describe("Renders Component", () => {
-  it("Renders Parent that holds store", () => {
-    const wrapper = shallow(
-      <Provider store={store}>
-        <App />
-      </Provider>
-    );
-    expect(wrapper).toMatchSnapshot();
-    expect(AllPost).toBeDefined();
-    expect(PostForm).toBeDefined();
-  });
-});
-describe("renders child component", () => {
-  it("<Allpost/>", () => {
-    const wrapper = shallow(
-      <Provider store={store}>
-        <AllPost />
-      </Provider>
-    );
-    expect(wrapper).toMatchSnapshot();
+configure({ adapter: new Adapter() });
+describe("Suite of tests", () => {
+  it("renders without crashing", () => {
+    shallow(<App />);
   });
 });
 
-describe("Component has button", () => {
-  it("<Post/> has a button", () => {
-    const wrapper = shallow(
-      <Provider store={store}>
-        <Post />
-      </Provider>
-    );
-
-    expect(wrapper.contains("<button></button>")).toBe(false);
-  });
-});
-
-describe("checking objects in child", () => {
-  it("<PostForm/> contains data{}", () => {
-    const data = {
-      editing: false
+describe("actions", () => {
+  it("should create an action to add todo that matches payload", () => {
+    const exepectedAction = {
+      type: "ADD_TODO",
+      payload: "Money"
     };
-    const wrapper = shallow(
-      <Provider store={store}>
-        <PostForm />
-      </Provider>
-    );
-    expect(wrapper.update());
-    expect(data).toHaveProperty("editing");
+    expect(actions.addTodo()).toEqual(exepectedAction);
   });
 });

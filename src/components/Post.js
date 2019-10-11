@@ -1,11 +1,16 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import PropTypes from "prop-types";
 
 class Post extends Component {
   render() {
     const { title, message } = this.props.post;
+    const { head } = this.props;
     return (
       <div>
+        <div>
+          <h1>{head}</h1>
+        </div>
         <div className="ui card">
           <div className="content">
             <h3>{title}</h3>
@@ -41,5 +46,11 @@ class Post extends Component {
     );
   }
 }
+Post.propTypes = {
+  head: PropTypes.string.isRequired
+};
+Post.defaultProps = {
+  head: "All Posts"
+};
 
 export default connect()(Post);

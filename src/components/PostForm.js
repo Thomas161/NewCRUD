@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import uuid from "uuid";
+import "../css/AllPost.css";
+
 class PostForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
@@ -27,6 +29,9 @@ class PostForm extends Component {
   }
 
   render() {
+    const style = {
+      margin: "70px"
+    };
     return (
       <div className="divElement">
         <h1>Create Post</h1>
@@ -44,7 +49,9 @@ class PostForm extends Component {
             placeholder="Message"
           />
           <br />
-          <button className="ui inverted violet button">Post</button>
+          <button style={style} className="ui inverted violet button">
+            Post
+          </button>
         </form>
       </div>
     );
