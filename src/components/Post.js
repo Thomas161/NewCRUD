@@ -7,6 +7,12 @@ import s from "../css/Post.module.css";
 import "../css/style.css";
 
 class Post extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      display: false
+    };
+  }
   render() {
     const {
       post: { title, message }
@@ -17,7 +23,12 @@ class Post extends Component {
         <div>
           <h1 className={s.h1}>{head}</h1>
         </div>
-        <CSSTransition classNames="list" timeout={1500}>
+        <CSSTransition
+          in={!this.state.display}
+          timeout={350}
+          classNames="list"
+          unmountOnExit
+        >
           <div className="ui card">
             <div className="content">
               <h3 className={s.h3}>{title}</h3>
