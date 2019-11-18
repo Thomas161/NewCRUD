@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { UPDATE_POST } from "../actions";
 
 class EditComponent extends Component {
   handleEdit = e => {
@@ -10,7 +11,11 @@ class EditComponent extends Component {
       newTitle,
       newMessage
     };
-    this.props.dispatch({ type: "UPDATE", id: this.props.post.id, data: data });
+    this.props.dispatch({
+      type: UPDATE_POST,
+      id: this.props.post.id,
+      data: data
+    });
   };
 
   componentDidMount() {

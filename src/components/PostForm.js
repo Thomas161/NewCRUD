@@ -1,11 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import uuid from "uuid";
-import "../css/AllPost.css";
+import sty from "../css/AllPost.module.css";
+import { ADD_POST } from "../actions";
 
 class PostForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
+
     const title = this.getTitle.value;
     const message = this.getMessage.value;
     const data = {
@@ -15,25 +17,23 @@ class PostForm extends Component {
       editing: false
     };
 
-    console.log(data);
+    // console.log(data);
 
     this.props.dispatch({
-      type: "ADD_POST",
+      type: ADD_POST,
       data
     });
     this.getTitle.value = "";
     this.getMessage.value = "";
   };
+
   componentDidMount() {
     console.log("Mounted");
   }
 
   render() {
-    const style = {
-      margin: "70px"
-    };
     return (
-      <div className="divElement">
+      <div className={sty.divElement}>
         <h1>Create Post</h1>
         <form className="pure-form" onSubmit={this.handleSubmit}>
           <input
@@ -42,16 +42,16 @@ class PostForm extends Component {
             ref={input => (this.getTitle = input)}
             placeholder="Title"
           />
+
           <br />
           <input
             type="text"
             ref={input => (this.getMessage = input)}
             placeholder="Message"
           />
-          <br />
-          <button style={style} className="ui inverted violet button">
-            Post
-          </button>
+
+          {/* <br /> */}
+          <button className="ui inverted violet button">Post</button>
         </form>
       </div>
     );

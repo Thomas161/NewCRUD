@@ -1,0 +1,31 @@
+/* .list-enter {
+  opacity: 0.01;
+}
+.list-enter.list-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+.list-leave {
+  opacity: 1;
+}
+
+.list-leave.list-leave-active {
+  opacity: 0.02;
+  transition: opacity 500ms ease-in;
+} */
+
+.pos {
+  margin-left: 80px;
+  border-radius: 20px;
+}
+.h3 {
+  font-size: 2em;
+}
+.h4 {
+  font-size: 1em;
+}
+.h1 {
+  font-size: 3em;
+  color: mediumvioletred;
+  font-weight: bold;
+}
