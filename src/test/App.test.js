@@ -13,12 +13,12 @@ describe("Suite of tests", () => {
   });
 });
 
-describe("actions", () => {
-  it("should create an action to add todo that matches payload", () => {
-    const exepectedAction = {
-      type: "ADD_TODO",
-      payload: "Money"
-    };
-    expect(actions.addTodo()).toEqual(exepectedAction);
-  });
-});
+// describe("actions", () => {
+//   it("should create an action to add todo that matches payload", () => {
+//     const exepectedAction = {
+//       type: "ADD_TODO",
+//       payload: "Money"
+//     };
+//     expect(actions.addTodo()).toEqual(exepectedAction);
+//   });
+// });
